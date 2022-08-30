@@ -1,0 +1,102 @@
+.clock_container {
+  display: grid;
+  place-content: center;
+}
+.clock_container .clock {
+  position: relative;
+  background: #000;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  padding: 10px;
+}
+.clock_container .clock::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: green;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  z-index: 3;
+}
+.clock_container .clock .clock_pins {
+  height: 100%;
+  position: relative;
+}
+.clock_container .clock .clock_pins .clock_pin {
+  --rotation: 0;
+  display: inline-block;
+  border: 2px solid #fff;
+  width: 6px;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+  transform-origin: bottom;
+  border-radius: 20px;
+}
+.clock_container .clock .clock_pins .clock_large_pin {
+  height: 40%;
+}
+.clock_container .clock .clock_pins .clock_medium_pin {
+  height: 35%;
+}
+.clock_container .clock .clock_pins .clock_small_pin {
+  width: 1px;
+  height: 25%;
+  background-color: red;
+}
+.clock_container .clock .clock_numbers {
+  font-weight: 500;
+}
+.clock_container .clock .clock_numbers .clock_no {
+  display: inline-block;
+  position: absolute;
+  color: red;
+  top: 0;
+  left: 47%;
+  height: 100%;
+  z-index: 5;
+  transform-origin: 100%;
+  -ms-writing-mode: sideways-rl;
+      writing-mode: sideways-rl;
+}
+.clock_container .clock .clock_numbers .one {
+  transform: rotate(30deg);
+}
+.clock_container .clock .clock_numbers .two {
+  transform: rotate(60deg);
+}
+.clock_container .clock .clock_numbers .three {
+  transform: rotate(90deg);
+}
+.clock_container .clock .clock_numbers .four {
+  transform: rotate(120deg);
+}
+.clock_container .clock .clock_numbers .five {
+  transform: rotate(150deg);
+}
+.clock_container .clock .clock_numbers .six {
+  transform: rotate(180deg);
+}
+.clock_container .clock .clock_numbers .seven {
+  transform: rotate(210deg);
+}
+.clock_container .clock .clock_numbers .eight {
+  transform: rotate(240deg);
+}
+.clock_container .clock .clock_numbers .nine {
+  transform: rotate(270deg);
+}
+.clock_container .clock .clock_numbers .ten {
+  transform: rotate(300deg);
+}
+.clock_container .clock .clock_numbers .eleven {
+  transform: rotate(330deg);
+}
+.clock_container .clock .clock_numbers .twelve {
+  transform: rotate(360deg);
+}/*# sourceMappingURL=style.css.map */
